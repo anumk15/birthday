@@ -56,8 +56,8 @@ const App = () => {
       
 
       {/* 🔊 Sounds */}
-      <audio ref={openAudioRef} src="/open.ogg" />
-      <audio ref={audioRef} src="/anu3.mp3" loop />
+      <audio ref={openAudioRef} src="/birthday/open.ogg" />
+      <audio ref={audioRef} src="/birthday/anu3.mp3" loop />
 
       {!isUnlocked ? (
         <button
@@ -81,10 +81,10 @@ const App = () => {
 
           {/* 💖 Background Photos */}
           <div className="bg-gallery">
-            <img src="/kaif1.jpeg" alt="" />
-            <img src="/kaif4.jpeg" alt="" />
-            <img src="/kaif6.jpeg" alt="" />
-            <img src="/kaif2.jpeg" alt="" />
+            <img src="/birthday/kaif1.jpeg" alt="" />
+            <img src="/birthday/kaif4.jpeg" alt="" />
+            <img src="/birthday/kaif6.jpeg" alt="" />
+            <img src="/birthday/kaif2.jpeg" alt="" />
           </div>
 
           {/* 💌 Message */}
