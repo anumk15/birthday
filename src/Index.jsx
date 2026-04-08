@@ -1,5 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
 import "./styles/global.css";
+import music from "./assets/anu3.mp3";
 
 const App = () => {
   const audioRef = useRef(null);
