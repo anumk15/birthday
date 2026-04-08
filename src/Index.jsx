@@ -56,7 +56,7 @@ const App = () => {
       
 
       {/* 🔊 Sounds */}
-      <audio ref={openAudioRef} controls src="/birthday/open.ogg" />
+      <audio ref={openAudioRef} src="/birthday/open.ogg" />
       <audio ref={audioRef} src="/birthday/anu3.mp3" loop />
 
       {!isUnlocked ? (
