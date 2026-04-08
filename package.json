@@ -2,6 +2,7 @@
   "name": "db.json",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://anumk15.github.io/birthday/",
   "type": "module",
   "scripts": {
     "dev": "vite",
