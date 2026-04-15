@@ -1,7 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
 import "./styles/global.css";
 
-
 const App = () => {
   const audioRef = useRef(null);
   const openAudioRef = useRef(null);
@@ -52,61 +51,76 @@ const App = () => {
   }, [isUnlocked, countdown]);
 
   return (
-    <div style={{ textAlign: "center", marginTop: "50px" }}>
-      
+    <div>
 
       {/* 🔊 Sounds */}
       <audio ref={openAudioRef} src="/birthday/open.ogg" />
       <audio ref={audioRef} src="/birthday/anu3.mp3" loop />
 
+      {/* 🔐 STEP 1: Unlock Screen */}
       {!isUnlocked ? (
-        <button
-          onClick={() => {
-            if (openAudioRef.current) {
-              openAudioRef.current.currentTime = 0;
-              openAudioRef.current.play().catch(() => {});
-            }
+        <div className="unlock-screen">
+          <div className="unlock-card">
+            <h1 className="title">💖 Special Surprise 💖</h1>
+            <p className="subtitle">Only for someone special...</p>
 
-            setTimeout(() => {
-              handlePassword();
-            }, 500);
-          }}
-        >
-          🔐 Enter Password
-        </button>
+            <button
+              className="unlock-btn"
+              onClick={() => {
+                if (openAudioRef.current) {
+                  openAudioRef.current.currentTime = 0;
+                  openAudioRef.current.play().catch(() => {});
+                }
+
+                setTimeout(() => {
+                  handlePassword();
+                }, 500);
+              }}
+            >
+              🔐 Unlock My Heart
+            </button>
+          </div>
+        </div>
+
       ) : !showContent ? (
-  <div>
-    
-    {/* 💖 Floating Hearts ONLY during countdown */}
-    <div className="hearts-container">
-      <div className="heart"></div>
-      <div className="heart"></div>
-      <div className="heart"></div>
-      <div className="heart"></div>
-      <div className="heart"></div>
-      <div className="heart"></div>
-      <div className="heart"></div>
-      <div className="heart"></div>
-      <div className="heart"></div>
-      <div className="heart"></div>
-    </div>
 
-    {/* ⏳ Countdown Text */}
-    <h2>Surprise starts in {countdown}... ⏳</h2>
+        /* ⏳ STEP 2: Countdown Screen */
+        <div className="countdown-screen">
 
-  </div>
+          {/* 💖 Hearts */}
+          <div className="hearts-container">
+            <div className="heart"></div>
+            <div className="heart"></div>
+            <div className="heart"></div>
+            <div className="heart"></div>
+            <div className="heart"></div>
+            <div className="heart"></div>
+            <div className="heart"></div>
+            <div className="heart"></div>
+            <div className="heart"></div>
+            <div className="heart"></div>
+          </div>
+
+          {/* ✨ Countdown Card */}
+          <div className="countdown-card">
+            <h1 className="count-title">💓 Get Ready 💓</h1>
+            <h2 className="count-number">{countdown}</h2>
+            <p className="count-text">Your surprise is loading...</p>
+          </div>
+        </div>
+
       ) : (
+
+        /* 🎂 STEP 3: Final Content */
         <div className="photo-section">
 
-          {/* 💖 Background Photos */}
-       <div className="bg-gallery">
- 
-    <img src="/birthday/kaif1.jpeg" alt="" />
-    <img src="/birthday/kaif4.jpeg" alt="" />
-    <img src="/birthday/kaif6.jpeg" alt="" />
-    <img src="/birthday/kaif2.jpeg" alt="" />
-  
-</div>
+          {/* 📸 Gallery */}
+          <div className="bg-gallery">
+            <img src="/birthday/kaif1.jpeg" alt="" />
+            <img src="/birthday/kaif4.jpeg" alt="" />
+            <img src="/birthday/kaif6.jpeg" alt="" />
+            <img src="/birthday/kaif2.jpeg" alt="" />
+          </div>
 
           {/* 💌 Message */}
           <div className="message-box">
