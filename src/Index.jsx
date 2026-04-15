@@ -75,17 +75,38 @@ const App = () => {
           🔐 Enter Password
         </button>
       ) : !showContent ? (
-        <h2>Surprise starts in {countdown}... ⏳</h2>
+  <div>
+    
+    {/* 💖 Floating Hearts ONLY during countdown */}
+    <div className="hearts-container">
+      <div className="heart"></div>
+      <div className="heart"></div>
+      <div className="heart"></div>
+      <div className="heart"></div>
+      <div className="heart"></div>
+      <div className="heart"></div>
+      <div className="heart"></div>
+      <div className="heart"></div>
+      <div className="heart"></div>
+      <div className="heart"></div>
+    </div>
+
+    {/* ⏳ Countdown Text */}
+    <h2>Surprise starts in {countdown}... ⏳</h2>
+
+  </div>
       ) : (
         <div className="photo-section">
 
           {/* 💖 Background Photos */}
-          <div className="bg-gallery">
-            <img src="/birthday/kaif1.jpeg" alt="" />
-            <img src="/birthday/kaif4.jpeg" alt="" />
-            <img src="/birthday/kaif6.jpeg" alt="" />
-            <img src="/birthday/kaif2.jpeg" alt="" />
-          </div>
+       <div className="bg-gallery">
+ 
+    <img src="/birthday/kaif1.jpeg" alt="" />
+    <img src="/birthday/kaif4.jpeg" alt="" />
+    <img src="/birthday/kaif6.jpeg" alt="" />
+    <img src="/birthday/kaif2.jpeg" alt="" />
+  
+</div>
 
           {/* 💌 Message */}
           <div className="message-box">
