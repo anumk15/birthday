@@ -379,18 +379,19 @@ h2 {
 
 /* ✨ Glass Card */
 .countdown-card {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(110, 45, 45, 0.1);
   backdrop-filter: blur(15px);
   padding: 40px;
   border-radius: 25px;
   text-align: center;
-  box-shadow: 0 0 40px rgba(255, 0, 100, 0.5);
+  box-shadow: 0 0 40px rgba(204, 11, 108, 0.5);
   z-index: 2;
+ 
 }
 
 /* 💓 Title */
 .count-title {
-  color: #fff;
+  color: #6908e0;
   font-size: 28px;
   margin-bottom: 15px;
 }
@@ -398,13 +399,13 @@ h2 {
 /* 🔢 Number */
 .count-number {
   font-size: 70px;
-  color: #ff4d6d;
+  color: #190206;
   animation: pulse 1s infinite;
 }
 
 /* ✨ Text */
 .count-text {
-  color: #ffd1dc;
+  color: #c70a36;
   margin-top: 10px;
 }
 
